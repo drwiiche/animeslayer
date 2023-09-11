@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" prefix="og: https://ogp.me/ns#">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+<style> html{ min-height: 500px;height: auto;}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+<meta name="theme-color" content="#1a77f4">
+<link rel="icon" type="image/png" href="images/%C3%98%C2%A7%C3%99_%C3%98%C2%AA%C3%99_%C3%98%C2%A7%C3%98%C2%B7-18-150x150-1.png">
+
+<title>تحميل انمي سلاير 2022 Download anime slayer apk للاندرويد</title>
+<meta name="description" content="تحميل انمي سلاير Anime Slayer هو عبارة عن تطبيق يتم تحميله على جهازك المحمول، لمشاهدة جميع الأفلام العالمية والأجنبية للأنمي وهناك أفلام انمي مترجمة باللغة">
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://animeslayerapp.com/">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="تحميل انمي سلاير 2022 Download anime slayer apk للاندرويد">
+<meta property="og:description" content="تحميل انمي سلاير Anime Slayer هو عبارة عن تطبيق يتم تحميله على جهازك المحمول، لمشاهدة جميع الأفلام العالمية والأجنبية للأنمي وهناك أفلام انمي مترجمة باللغة">
+<meta property="og:url" content="https://animeslayerapp.com/">
+<meta property="og:site_name" content="انمي سلاير">
+<meta property="og:updated_time" content="2023-06-20T14:15:44+03:00">
+<meta property="article:published_time" content="2022-08-22T04:28:55+03:00">
+<meta property="article:modified_time" content="2023-06-20T14:15:44+03:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="تحميل انمي سلاير 2022 Download anime slayer apk للاندرويد">
+<meta name="twitter:description" content="تحميل انمي سلاير Anime Slayer هو عبارة عن تطبيق يتم تحميله على جهازك المحمول، لمشاهدة جميع الأفلام العالمية والأجنبية للأنمي وهناك أفلام انمي مترجمة باللغة">
+<meta name="twitter:label1" content="Written by">
+<meta name="twitter:data1" content="admin">
+<meta name="twitter:label2" content="Time to read">
+<meta name="twitter:data2" content="Less than a minute">
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":["Organization","Person"],"@id":"https://animeslayerapp.com/#person","name":"\u062a\u062d\u0645\u064a\u0644 \u0627\u0646\u0645\u064a \u0633\u0644\u0627\u064a\u0631 Anime Slayer 2020 \u0645\u062c\u0627\u0646\u0627 \u0644\u0644\u0627\u0646\u062f\u0631\u0648\u064a\u062f \u0648\u0627\u0644\u0627\u064a\u0641\u0648\u0646 \u0628\u0631\u0627\u0628\u0637 \u0645\u0628\u0627\u0634\u0631","url":"https://animeslayerapp.com"},{"@type":"WebSite","@id":"https://animeslayerapp.com/#website","url":"https://animeslayerapp.com","name":"\u062a\u062d\u0645\u064a\u0644 \u0627\u0646\u0645\u064a \u0633\u0644\u0627\u064a\u0631 Anime Slayer 2020 \u0645\u062c\u0627\u0646\u0627 \u0644\u0644\u0627\u0646\u062f\u0631\u0648\u064a\u062f \u0648\u0627\u0644\u0627\u064a\u0641\u0648\u0646 \u0628\u0631\u0627\u0628\u0637 \u0645\u0628\u0627\u0634\u0631","publisher":{"@id":"https://animeslayerapp.com/#person"},"inLanguage":"ar","potentialAction":{"@type":"SearchAction","target":"https://animeslayerapp.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://animeslayerapp.com/wp-content/uploads/2022/09/\u0627\u0646\u0645\u064a-\u0633\u0644\u0627\u064a\u0631-2022-\u062a\u0646\u0632\u064a\u0644-APK-150x150.webp","url":"https://animeslayerapp.com/wp-content/uploads/2022/09/\u0627\u0646\u0645\u064a-\u0633\u0644\u0627\u064a\u0631-2022-\u062a\u0646\u0632\u064a\u0644-APK-150x150.webp","width":"200","height":"200","inLanguage":"ar"},{"@type":"WebPage","@id":"https://animeslayerapp.com/#webpage","url":"https://animeslayerapp.com/","name":"\u062a\u062d\u0645\u064a\u0644 \u0627\u0646\u0645\u064a \u0633\u0644\u0627\u064a\u0631 2022 Download anime slayer apk \u0644\u0644\u0627\u0646\u062f\u0631\u0648\u064a\u062f","datePublished":"2022-08-22T04:28:55+03:00","dateModified":"2023-06-20T14:15:44+03:00","about":{"@id":"https://animeslayerapp.com/#person"},"isPartOf":{"@id":"https://animeslayerapp.com/#website"},"primaryImageOfPage":{"@id":"https://animeslayerapp.com/wp-content/uploads/2022/09/\u0627\u0646\u0645\u064a-\u0633\u0644\u0627\u064a\u0631-2022-\u062a\u0646\u0632\u064a\u0644-APK-150x150.webp"},"inLanguage":"ar"},{"@type":"Person","@id":"https://animeslayerapp.com/author/admin/","name":"admin","url":"https://animeslayerapp.com/author/admin/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/1e81b059c8a2c68619ef29ad46d0d434?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/1e81b059c8a2c68619ef29ad46d0d434?s=96&amp;d=mm&amp;r=g","caption":"admin","inLanguage":"ar"},"sameAs":["https://animeslayerapp.com"]},{"@type":"Article","headline":"\u062a\u062d\u0645\u064a\u0644 \u0627\u0646\u0645\u064a \u0633\u0644\u0627\u064a\u0631 2022 Download anime slayer apk \u0644\u0644\u0627\u0646\u062f\u0631\u0648\u064a\u062f","keywords":"Anime Slayer,\u0627\u0646\u0645\u0649 \u0633\u0644\u0627\u064a\u0631","datePublished":"2022-08-22T04:28:55+03:00","dateModified":"2023-06-20T14:15:44+03:00","author":{"@id":"https://animeslayerapp.com/author/admin/","name":"admin"},"publisher":{"@id":"https://animeslayerapp.com/#person"},"description":"\u062a\u062d\u0645\u064a\u0644 \u0627\u0646\u0645\u064a \u0633\u0644\u0627\u064a\u0631 Anime Slayer \u0647\u0648 \u0639\u0628\u0627\u0631\u0629 \u0639\u0646 \u062a\u0637\u0628\u064a\u0642 \u064a\u062a\u0645 \u062a\u062d\u0645\u064a\u0644\u0647 \u0639\u0644\u0649 \u062c\u0647\u0627\u0632\u0643 \u0627\u0644\u0645\u062d\u0645\u0648\u0644\u060c \u0644\u0645\u0634\u0627\u0647\u062f\u0629 \u062c\u0645\u064a\u0639 \u0627\u0644\u0623\u0641\u0644\u0627\u0645 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0629 \u0648\u0627\u0644\u0623\u062c\u0646\u0628\u064a\u0629 \u0644\u0644\u0623\u0646\u0645\u064a \u0648\u0647\u0646\u0627\u0643 \u0623\u0641\u0644\u0627\u0645 \u0627\u0646\u0645\u064a \u0645\u062a\u0631\u062c\u0645\u0629 \u0628\u0627\u0644\u0644\u063a\u0629","name":"\u062a\u062d\u0645\u064a\u0644 \u0627\u0646\u0645\u064a \u0633\u0644\u0627\u064a\u0631 2022 Download anime slayer apk \u0644\u0644\u0627\u0646\u062f\u0631\u0648\u064a\u062f","@id":"https://animeslayerapp.com/#richSnippet","isPartOf":{"@id":"https://animeslayerapp.com/#webpage"},"image":{"@id":"https://animeslayerapp.com/wp-content/uploads/2022/09/\u0627\u0646\u0645\u064a-\u0633\u0644\u0627\u064a\u0631-2022-\u062a\u0646\u0632\u064a\u0644-APK-150x150.webp"},"inLanguage":"ar","mainEntityOfPage":{"@id":"https://animeslayerapp.com/#webpage"}}]}</script>
+
+<link rel="dns-prefetch" href="//stats.wp.com">
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="انمي سلاير &laquo; الخلاصة" href="https://animeslayerapp.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="انمي سلاير &laquo; خلاصة التعليقات" href="https://animeslayerapp.com/comments/feed/">
+<link data-minify="1" rel="stylesheet" id="wp-block-library-rtl-css" href="css/style-rtl.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link data-minify="1" rel="stylesheet" id="jetpack-videopress-video-block-view-css" href="css/view.rtl.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="mediaelement-css" href="css/mediaelementplayer-legacy.min.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="wp-mediaelement-css" href="css/wp-mediaelement.min.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="classic-theme-styles-css" href="css/classic-themes.min.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('index_1.html#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('index_1.html#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('index_1.html#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('index_1.html#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('index_1.html#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('index_1.html#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('index_1.html#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('index_1.html#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel="stylesheet" id="softdown-style-rtl-css" href="css/style-rtl.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="tablepress-default-css" href="css/default-rtl.css" type="text/css" media="all">
+<style id="rocket-lazyload-inline-css" type="text/css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(images/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<link data-minify="1" rel="stylesheet" id="jetpack_css-rtl-css" href="css/jetpack-rtl.css" type="text/css" media="all">
+<link rel="https://api.w.org/" href="https://animeslayerapp.com/wp-json/"><link rel="alternate" type="application/json" href="https://animeslayerapp.com/wp-json/wp/v2/pages/1169"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://animeslayerapp.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://animeslayerapp.com/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.2.2">
+<link rel="shortlink" href="https://animeslayerapp.com/">
+<style>img#wpstats{display:none}</style>
+<meta property="og:title" content="انمي سلاير">
+<meta property="og:type" content="website">
+<meta property="og:description" content="تحميل تطبيق أنمي سلاير Anime Slayer للاندروريد لمشاهدة أفلام و مسلسلات الأنمي مترجمة بجودة عالية ويم">
+<meta property="og:url" content="https://animeslayerapp.com/">
+<meta property="og:site_name" content="انمي سلاير">
+<noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style> <style type="text/css" id="wp-custom-css">
+			
+.entry h1,
+.entry h2,
+.entry h3,
+.entry h4,
+.entry h5,
+.entry h6 {
+    font-size: 20px;
+    font-weight: inherit;
+    margin: 10px auto 15px;
+}
+.entry h1,
+.entry h2,
+.entry h3,
+.entry h4,
+.entry h5,
+.entry h6 {
+    color: #000!important;
+    line-height: 1.4!important;
+    padding: 5px 15px!important;
+    border-radius: 4px!important;
+    width: fit-content!important;
+    width: -moz-fit-content!important;
+    background: #f5f5f5!important;
+    border: 1px solid #f3f3f3!important;
+    border-bottom: 2px solid #dcdcdc!important;
+}
+
+		</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preload" href="https://animeslayerapp.com/wp-content/themes/softdown2.0/assets/fonts/kufi.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="https://animeslayerapp.com/wp-content/themes/softdown2.0/assets/fonts/fontello/fontello.woff" as="font" type="font/woff" crossorigin>
+<script type="rocketlazyloadscript" async src="js/adsbygoogle.js" crossorigin="anonymous"></script>
+<meta name="google-site-verification" content="Oco7ADx-_m3qfzsHlzHcTj-FwfoLpdn5DQ6o-8wPtqQ">
+<meta name="ahrefs-site-verification" content="a615de29de89626efb7b9b8f2de01da13e6853190a1fbb7a11fa6769b1fd7361">
+<style>
+	#wrapper .container{max-width:1150px;}#wrapper .primary-menu .logo{width:100px;}#wrapper .nav-container{margin-right:-100px;}#wrapper .soft-primary-menu-container{margin-right:100px;}html body{font-family: kufi, Tahoma}#wrapper .menu li a{font-size: 14px;}#wrapper .widget .title{font-size: 14px}.block-header h2, .block-header h3{font-size: 14px}#wrapper .entry p, #wrapper .entry li{font-size: 14px; line-height: 35px}#wrapper .entry p{margin: 14px 0;}.blue #footer #searchsubmit,.blue #footer .widget li a:hover,.blue .footer_2,.blue .primary-menu .menu .mega-menu-block,.blue .primary-menu .menu .mega-menu-block ul li.secondary-menu-active,.blue .primary-menu .menu .mega-menu-block ul li:hover,.blue .primary-menu .menu li:hover,.blue .search-button,.blue .social-mobile li,.blue .totop{background-color:#176ada}.blue #load-results,.blue .icon-go,.blue .scroll-control:hover,.blue .search.is-open .search-input,.blue .softs-tabs li:hover:not(.active) .icon:before{color:#1a77f4}.blue #footer,.blue #submit,.blue .block-header .bicon,.blue .block_grid .block-content ul li:hover .soft-infos,.blue .category_widget li.active,.blue .category_widget li:hover,.blue .col-link .dlink,.blue .dl,.blue .dl .btn,.blue .dltext,.blue .primary-menu,.blue .slider_block .block-content ul li:hover .soft-infos,.blue .social-mobile,.blue .softs-tabs .active,.blue .tags a:hover,.blue .widget-header .bicon,.blue .widget_search #searchsubmit{background-color:#1a77f4;color:#fff}.blue .block-header,.blue .col-link .dtext,.blue .dltext,.blue .footer_category_widget li a,.blue .primary-menu .menu .mega-menu-block ul li,.blue .widget .title,.blue .widget_tabs .softs-tabs,.blue .widget_tabs .widget-header{border-color:#176ada}.blue .mobile .menu{background-color:rgba(26,119,244,.97)}.blue .social-mobile{transition:background .2s ease}.blue .block-header,.blue .widget .title,.blue .widget_tabs .softs-tabs,.blue .widget_tabs .widget-header{border-bottom:2px solid;color:#1a77f4}.blue .softs-tabs{color:#1a77f4}.blue .col-link .dlink:hover,.blue .col-links .dlink:hover{box-shadow:0 8px 8px -4px rgba(26,119,244,.49)}.blue .columns .col-label,.blue .lines .col-label,.blue .rows .col-label{color:#1b4173;background:rgba(105,166,247,.32)}.blue .columns .col-val,.blue .lines .col-val,.blue .rows .col-val{color:#5b5e63;background:rgba(105,166,247,.06)}.blue .lines .col-label{width:30%;background:linear-gradient(270deg,rgba(105,166,247,.32),rgba(105,166,247,.06))}.blue .lines .col-label,.blue .lines .col-val{float:right;text-align:right;padding-right:10px}.blue .lines .col-val{width:70%}.blue .lines .col-12{margin-bottom:0;padding:0}.blue .lines .col-3{padding:0;margin-bottom:5px;width:100%}.blue #footer .widget .title{border-bottom:1px solid #176ada}.blue #footer #s{border:1px solid #176ada}.blue .widget_categories li a,.blue .widget_nav_menu li a,.blue .widget_pages li a{border-bottom:none}::-webkit-scrollbar{background-color:transparent;height:6px;width:5px;border-radius:5px}::-webkit-scrollbar:hover{background-color:rgba(0,0,0,.12)}::-webkit-scrollbar-button{width:0;height:0}::-webkit-scrollbar-thumb{background-color:#1a77f4;min-height:48px;min-width:48px;border-radius:5px}::-webkit-scrollbar-thumb:hover{background-color:#176ada}@media screen and (max-width:768px){.blue .gn-icon.opened,.blue .primary-menu .menu li:hover{background-color:#176ada}.blue .primary-menu .menu li{border-bottom:1px solid #176ada}.blue .search-button{background-color:transparent;border-color:#176ada}}
+.icon-star-empty:before { content: '\2606'; } /* '☆' */
+.icon-left-open:before { content: '\e75d'; } /* '' */
+.icon-right-open:before { content: '\e75e'; } /* '' */
+.icon-mobile:before { content: '\e800'; } /* '' */
+.icon-size:before { content: '\e801'; } /* '' */
+.icon-clock:before { content: '\e802'; } /* '' */
+.icon-search:before { content: '\e803'; } /* '' */
+.icon-star:before { content: '\e804'; } /* '' */
+.icon-link:before { content: '\e805'; } /* '' */
+.icon-cancel:before { content: '\e806'; } /* '' */
+.icon-users:before { content: '\e807'; } /* '' */
+.icon-folder:before { content: '\e808'; } /* '' */
+.icon-globe:before { content: '\e809'; } /* '' */
+.icon-tags:before { content: '\e80a'; } /* '' */
+.icon-user:before { content: '\e80b'; } /* '' */
+.icon-warning:before { content: '\e80c'; } /* '' */
+.icon-download:before { content: '\e80d'; } /* '' */
+.icon-ok:before { content: '\e80e'; } /* '' */
+.icon-comment:before { content: '\e80f'; } /* '' */
+.icon-spin1:before { content: '\e830'; } /* '' */
+.icon-version:before { content: '\e832'; } /* '' */
+.icon-firefox:before { content: '\e840'; } /* '' */
+.icon-marquee:before { content: '\e847'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-angle-left:before { content: '\f104'; } /* '' */
+.icon-angle-right:before { content: '\f105'; } /* '' */
+.icon-angle-down:before { content: '\f107'; } /* '' */
+.icon-info:before { content: '\f129'; } /* '' */
+.icon-tumblr:before { content: '\f173'; } /* '' */
+.icon-left:before { content: '\f177'; } /* '' */
+.icon-apple:before { content: '\f179'; } /* '' */
+.icon-windows:before { content: '\f17a'; } /* '' */
+.icon-android:before { content: '\f17b'; } /* '' */
+.icon-linux:before { content: '\f17c'; } /* '' */
+.icon-pinterest:before { content: '\f231'; } /* '' */
+.icon-whatsapp:before { content: '\f232'; } /* '' */				@font-face {
+			        font-family: 'kufi';
+			        font-display: swap;
+			        src: url(fonts/kufi.woff) }}) format('woff');
+			        font-weight: normal;
+			        font-style: normal;
+			    }
+			</style><style>
+    @font-face {
+        font-family: 'soft';
+        font-display: swap;
+        src: url(fonts/fontello.woff) }}) format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+</style>
+</head>
+<body data-rsssl="1" class="rtl home page-template-default page page-id-1169 template-none-sidebar">
+<div id="wrapper" class="blue full">
+<header>
+<div class="primary-menu">
+<div class="container">
+<a href="#" title class="icon gn-icon gn-icon-menu open-menu">
+<div class="bar1"></div>
+<div class="bar2"></div>
+<div class="bar3"></div>
+</a>
+<div class="logo pull-left">
+<h1>
+<a href="https://animeslayerapp.com/" title="انمي سلاير" class>
+<strong style="line-height: 50px;color: #e6e6e6;">انمي سلاير</strong>
+</a>
+</h1>
+</div>
+<div class="mobile menu-closed">
+<div class="nav-container">
+<div class="soft-primary-menu-container">
+<div class="menu-%d8%a7%d9%84%d8%b1%d8%a6%d9%8a%d8%b3%d9%8a%d9%87-container"><ul id="menu-%d8%a7%d9%84%d8%b1%d8%a6%d9%8a%d8%b3%d9%8a%d9%87" class="menu"><li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52"><a href="https://animeslayerapp.com/manga-slayer-apk/"><span class="no-icon"></span>مانجا سلاير</a></li>
+<li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53"><a href="https://animeslayerapp.com/max-slayer-apk/"><span class="no-icon"></span>ماكس سلاير</a></li>
+<li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a href="https://animeslayerapp.com/drama-slayer-apk/"><span class="no-icon"></span>دراما سلاير</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-55"><a href="https://animeslayerapp.com"><span class="no-icon"></span>انمى سلاير</a></li>
+<li id="menu-item-1485" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1485"><a href="https://honistaapp.com"><span class="no-icon"></span>هونستا</a></li>
+<li id="menu-item-1495" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1495"><a href="https://honista-apk.com/"><span class="no-icon"></span>Honista APK</a></li>
+<li id="menu-item-1521" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1521"><a href="https://megrb.com/"><span class="no-icon"></span>مجرب</a></li>
+<li id="menu-item-1532" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1532"><a href="https://honista-gold.com/"><span class="no-icon"></span>هونيستا</a></li>
+</ul></div> </div>
+</div>
+</div>
+<div class="nav-left pull-right text-right">
+<button class="search-button icon-search pull-right" type="submit"></button>
+<div class="search pull-right" id="search">
+<div class="close-button">
+</div>
+<form method="get" class="searchform pull-right" action="https://animeslayerapp.com/">
+<div class="icon-spin2" id="load-results"></div>
+<input class="search-input" type="text" name="s" value="إبحث هنا" onfocus="if (this.value == 'إبحث هنا') {this.value = '';}" onblur="if (this.value == '') {this.value = 'إبحث هنا';}">
+<div id="search-results">
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="content page">
+<div class="container prln15">
+<div class="custom-page sticky_content">
+<div class="page-template block__inner app-container">
+<div class="page-infos line-title">
+<div class="breadcrumbs ellipsis title">
+<script type="rocketlazyloadscript" async src="js/adsbygoogle.js" crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7060142569725330" data-ad-slot="4213560994" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+<div class="page-content entry">
+<h1 class="b-title">انمى سلاير Anime Slayer</h1>
+<div class="wp-block-image alert success" style="text-align: center;">
+<figure class="aligncenter size-thumbnail"><img decoding="async" class="aligncenter size-thumbnail wp-image-1250" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%20150%20150&#x27;%3E%3C/svg%3E" alt="انمي سلاير 2022 تنزيل APK" width="150" height="150" data-lazy-srcset="https://animeslayerapp.com/wp-content/uploads/2022/09/انمي-سلاير-2022-تنزيل-APK-150x150.webp 150w, https://animeslayerapp.com/wp-content/uploads/2022/09/انمي-سلاير-2022-تنزيل-APK-55x55.webp 55w, https://animeslayerapp.com/wp-content/uploads/2022/09/انمي-سلاير-2022-تنزيل-APK-85x85.webp 85w, https://animeslayerapp.com/wp-content/uploads/2022/09/انمي-سلاير-2022-تنزيل-APK.webp 300w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" title="انمى سلاير Anime Slayer 1" data-lazy-src="https://animeslayerapp.com/wp-content/uploads/2022/09/انمي-سلاير-2022-تنزيل-APK-150x150.webp"><noscript><img decoding="async" class="aligncenter size-thumbnail wp-image-1250" src="images/%C3%98%C2%A7%C3%99_%C3%99_%C3%99_-%C3%98%C2%B3%C3%99_%C3%98%C2%A7%C3%99_%C3%98%C2%B1-2022-%C3%98%C2%AA%C3%99_%C3%98%C2%B2%C3%99_%C3%99_-APK-150x150.webp" alt="انمي سلاير 2022 تنزيل APK" width="150" height="150" srcset="images/%C3%98%C2%A7%C3%99_%C3%99_%C3%99_-%C3%98%C2%B3%C3%99_%C3%98%C2%A7%C3%99_%C3%98%C2%B1-2022-%C3%98%C2%AA%C3%99_%C3%98%C2%B2%C3%99_%C3%99_-APK-150x150.webp 150w, images/%C3%98%C2%A7%C3%99_%C3%99_%C3%99_-%C3%98%C2%B3%C3%99_%C3%98%C2%A7%C3%99_%C3%98%C2%B1-2022-%C3%98%C2%AA%C3%99_%C3%98%C2%B2%C3%99_%C3%99_-APK-55x55.webp 55w, images/%C3%98%C2%A7%C3%99_%C3%99_%C3%99_-%C3%98%C2%B3%C3%99_%C3%98%C2%A7%C3%99_%C3%98%C2%B1-2022-%C3%98%C2%AA%C3%99_%C3%98%C2%B2%C3%99_%C3%99_-APK-85x85.webp 85w, images/%C3%98%C2%A7%C3%99_%C3%99_%C3%99_-%C3%98%C2%B3%C3%99_%C3%98%C2%A7%C3%99_%C3%98%C2%B1-2022-%C3%98%C2%AA%C3%99_%C3%98%C2%B2%C3%99_%C3%99_-APK.webp 300w" sizes="(max-width: 150px) 100vw, 150px" title="انمى سلاير Anime Slayer 1"></noscript></figure>
+</div>
+<div id="gb-whatsapp-pro" class="has-text-align-center custom-title" style="text-align: center;"><strong><span id="the_keyword_1" class="keyword__with__serp">انمى سلاير Anime Slayer</span></strong></div>
+<div id="welcome-to-the-official-website-of--gbwhatsapp-pro--download-latest-version-gb-whatsapp-pro-apk-for-android-and-enjoy-advanced-messaging" class="has-text-align-center custom-title" style="text-align: center;"><span id="crumbs"><span class="current">تنزيل انمي سلاير anime slayer apk لـ اندرويد [APK]</span></span></div>
+<div id="-100-safe-amp-secure-official-" class="has-text-align-center has-text-color custom-title" style="text-align: center;"><strong>100% امان  (الموقع الرسمي )</strong></div>
+<div class="has-text-align-center has-text-color custom-title" style="text-align: center;"><strong>الاصدار 1.5.0 (اخر تحديث)</strong></div>
+<div class="custom-title" style="text-align: center;"><a class="shortc-button medium green " href="https://animeslayerapp.com/download-apk/">تحميل مباشر</a></div>
+<div class="notranslate" style="border-block: initial; border-inline: initial; border-start-start-radius: initial; border-start-end-radius: initial; border-end-start-radius: initial; border-end-end-radius: initial; overflow-inline: initial; overflow-block: initial; overscroll-behavior-inline: initial; overscroll-behavior-block: initial; margin-block: initial; margin-inline: initial; scroll-margin-block: initial; scroll-margin-inline: initial; padding-block: initial; padding-inline: initial; scroll-padding-block: initial; scroll-padding-inline: initial; inset-block: initial; inset-inline: initial; block-size: initial; min-block-size: initial; max-block-size: initial; inline-size: initial; min-inline-size: initial; max-inline-size: initial; background: initial; background-blend-mode: initial; border: initial; border-radius: initial; box-decoration-break: initial; -moz-float-edge: initial; display: initial; position: initial; float: initial; clear: initial; vertical-align: initial; overflow: initial; overflow-anchor: initial; transform: initial; rotate: initial; scale: initial; translate: initial; offset: initial; scroll-behavior: initial; scroll-snap-align: initial; scroll-snap-type: initial; scroll-snap-stop: initial; overscroll-behavior: initial; isolation: initial; break-after: initial; break-before: initial; break-inside: initial; resize: initial; perspective: initial; perspective-origin: initial; backface-visibility: initial; transform-box: initial; transform-style: initial; transform-origin: initial; contain: initial; appearance: initial; -moz-orient: initial; will-change: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; touch-action: initial; -webkit-line-clamp: initial; scrollbar-gutter: initial; columns: initial; column-fill: initial; column-rule: initial; column-span: initial; content: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; opacity: initial; box-shadow: initial; clip: initial; filter: initial; backdrop-filter: initial; mix-blend-mode: initial; font: initial; font-synthesis: initial; visibility: initial; writing-mode: initial; text-orientation: initial; print-color-adjust: initial; image-rendering: initial; image-orientation: initial; dominant-baseline: initial; text-anchor: initial; color-interpolation: initial; color-interpolation-filters: initial; fill: initial; fill-opacity: initial; fill-rule: initial; shape-rendering: initial; stroke: initial; stroke-width: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-dasharray: initial; stroke-dashoffset: initial; clip-rule: initial; marker: initial; paint-order: initial; border-collapse: initial; empty-cells: initial; caption-side: initial; border-spacing: initial; color: initial; text-transform: initial; hyphens: initial; -moz-text-size-adjust: initial; text-indent: initial; overflow-wrap: initial; word-break: initial; text-justify: initial; text-align-last: initial; letter-spacing: initial; word-spacing: initial; white-space: initial; text-shadow: initial; text-emphasis: initial; text-emphasis-position: initial; tab-size: initial; line-break: initial; -webkit-text-fill-color: initial; -webkit-text-stroke: initial; ruby-align: initial; ruby-position: initial; text-combine-upright: initial; text-rendering: initial; text-underline-offset: initial; text-underline-position: initial; text-decoration-skip-ink: initial; hyphenate-character: initial; cursor: initial; pointer-events: initial; -moz-user-input: initial; -moz-user-modify: initial; -moz-user-focus: initial; caret-color: initial; accent-color: initial; color-scheme: initial; scrollbar-color: initial; list-style: initial; quotes: initial; margin: initial; overflow-clip-margin: initial; scroll-margin: initial; outline: initial; outline-offset: initial; padding: initial; scroll-padding: initial; inset: initial; z-index: initial; flex-flow: initial; place-content: initial; place-items: initial; flex: initial; place-self: initial; order: initial; width: initial; min-width: initial; max-width: initial; height: initial; min-height: initial; max-height: initial; box-sizing: initial; object-fit: initial; object-position: initial; grid-area: initial; grid: initial; gap: initial; aspect-ratio: initial; vector-effect: initial; stop-color: initial; stop-opacity: initial; flood-color: initial; flood-opacity: initial; lighting-color: initial; mask-type: initial; clip-path: initial; mask: initial; x: initial; y: initial; cx: initial; cy: initial; rx: initial; ry: initial; r: initial; d: initial; table-layout: initial; text-overflow: initial; text-decoration: initial; ime-mode: initial; scrollbar-width: initial; user-select: initial; -moz-window-dragging: initial; -moz-force-broken-image-icon: initial; transition: initial; animation: initial; -moz-box-align: initial; -moz-box-direction: initial; -moz-box-flex: initial; -moz-box-orient: initial; -moz-box-pack: initial; -moz-box-ordinal-group: initial; text-align: center;"><strong><script type="rocketlazyloadscript" async src="js/adsbygoogle_1.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7060142569725330" data-ad-slot="4213560994" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></strong></div>
+<div class="custom-title" style="text-align: center;"><strong><span style="font-size: 14pt;">أفضل تطبيق عربي لمشاهدة و تحميل الانمي المترجم برابط مباشر</span></strong></div>
+<div>
+<p><strong><b>تحميل انمي سلاير</b> Anime Slayer</strong> هو عبارة عن تطبيق يتم تحميله على جهازك المحمول، لمشاهدة جميع الأفلام العالمية والأجنبية <b>للأنمي</b> وهناك أفلام انمي مترجمة باللغة العربية، كما أن من مميزات هذا التطبيق، أنه يعرض الأفلام والمسلسلات بجودة عالية، وبدون تقطيع، وبدون فواصل إعلانية، وكل أفلام ومسلسلات الأنمي مجمعة في تطبيق واحد، لذلك حاز تطبيق <b><i>انمي سلاير</i></b><a href="https://animeslayerapp.com"> <b><i>Anime Slayer</i></b></a> إعجاب الملايين من الصغار والكبار</p>
+<p>ايضا يتوفر العديد من التطبيقات المتشابهة مثل<a href="https://animeslayerapp.com/drama-slayer-apk/"> دراما سلاير</a> وهذا التطبيق يوفر محتوى مسلسلات الدراما الكوريه والاسيويه واليابانية  يتوفر ايضا<a href="https://animeslayerapp.com/max-slayer-apk/"> ماكس سلاير</a> هو عبارة عن تطبيق لمشاهدة جميع المسلسلات، و الأفلام العالمية الأجنبية والعربية مجاناً  وايضا تطبيق <a href="https://animeslayerapp.com/manga-slayer-apk/">مانجا سلاير</a> للاطلاع على أحدث قصص المانجا، وتحميل مسلسلات و افلام الانيميشن المترجمة</p>
+<h2 style="text-align: center;"><strong><span style="font-size: 14pt;">ماهو تطبيق انمي سلاير :<br>
+</span></strong></h2>
+<p><b>تطبيق انمي سلاير anime slayer download </b>هو تطبيق يعرض جميع أفلام ومسلسلات الأنمي مجاناً، وهو تطبيق سهل الاستخدام والتعامل معه، فهو مترجم باللغة العربية، كما أنه يعرض أخر إصدارات لأفلام الانمي، وهو تطبيق حاز على إعجاب الصغار والكبار، لأنه يعرض جميع مسلسلات و أفلام الأنمي، منها الدراما والأكشن والرومانسي، والخيال العلمي، والاثارة والتشويق والالغاز وكل هذا على تطبيق واحد مجاناً، كما يمكنك معرفة قصة الفيلم أو المسلسل قبل مشاهدته، وذلك عن طريق الضغط عليه وقراءة ملخص القصة، وإذا أعجبك يمكنك مشاهدته بدون تقطيع أو فواصل إعلانية.</p>
+<h2 class="alert warning" style="text-align: center;"><span style="font-size: 14pt;"><b>معلومات حول تطبيق انمى سلاير  للاندرويد :</b></span></h2>
+<p style="text-align: center;"><strong><script type="rocketlazyloadscript" async src="js/adsbygoogle_1.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7060142569725330" data-ad-slot="4213560994" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></strong></p>
+<div class="block-heading text-right light-color">
+<table id="tablepress-5" class="tablepress tablepress-id-5" style="width: 33.066%; height: 132px;">
+<tbody class="row-hover">
+<tr class="row-1 odd" style="height: 22px;">
+<td class="column-1" style="height: 22px;">🔄 رقم الاصدار</td>
+<td class="column-2" style="height: 22px;">1.5.0</td>
+</tr>
+<tr class="row-2 even" style="height: 22px;">
+<td class="column-1" style="height: 22px;">✅ حجم التطبيق</td>
+<td class="column-2" style="height: 22px;">16 MB</td>
+</tr>
+<tr class="row-3 odd" style="height: 22px;">
+<td class="column-1" style="height: 22px;">📱 متوافق معا</td>
+<td class="column-2" style="height: 22px;">Android 4.0+</td>
+</tr>
+<tr class="row-4 even" style="height: 22px;">
+<td class="column-1" style="height: 22px;">🏆 اسم التطبيق</td>
+<td class="column-2" style="height: 22px;">انمى سلاير</td>
+</tr>
+<tr class="row-5 odd" style="height: 22px;">
+<td class="column-1" style="height: 22px;">📸 هل يحتاج الى روت</td>
+<td class="column-2" style="height: 22px;">لا</td>
+</tr>
+<tr class="row-6 even" style="height: 22px;">
+<td class="column-1" style="height: 22px;">📝 النوع</td>
+<td class="column-2" style="height: 22px;">برنامج مشاهدت وتحميل الانمى</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="text-align: center;"><a class="shortc-button large blue" href="https://animeslayerapp.com/download-apk/">   تحميل من هنا اخر اصدار</a></p>
+<p style="text-align: center;"><strong><script type="rocketlazyloadscript" async src="js/adsbygoogle_1.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7060142569725330" data-ad-slot="4213560994" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script type="rocketlazyloadscript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></strong></p>
+<h3 style="text-align: center;">صور من داخل التطبيق :</h3>
+<table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%;"><img decoding="async" class="size-medium wp-image-157 aligncenter" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%20169%20300&#x27;%3E%3C/svg%3E" alt="index3 1" width="169" height="300" data-lazy-srcset="https://animeslayerapp.com/wp-content/uploads/2021/05/index3-1-169x300.jpg 169w, https://animeslayerapp.com/wp-content/uploads/2021/05/index3-1-576x1024.jpg 576w, https://animeslayerapp.com/wp-content/uploads/2021/05/index3-1.jpg 720w" data-lazy-sizes="(max-width: 169px) 100vw, 169px" title="انمى سلاير Anime Slayer 2" data-lazy-src="https://animeslayerapp.com/wp-content/uploads/2021/05/index3-1-169x300.jpg"><noscript><img decoding="async" class="size-medium wp-image-157 aligncenter" src="images/index3-1-169x300.jpg" alt="index3 1" width="169" height="300" srcset="images/index3-1-169x300.jpg 169w, images/index3-1-576x1024.jpg 576w, images/index3-1.jpg 720w" sizes="(max-width: 169px) 100vw, 169px" title="انمى سلاير Anime Slayer 2"></noscript></td>
+<td style="width: 50%;"><img decoding="async" class="size-medium wp-image-151 aligncenter" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%20169%20300&#x27;%3E%3C/svg%3E" alt="index2" width="169" height="300" data-lazy-srcset="https://animeslayerapp.com/wp-content/uploads/2021/05/index2-169x300.jpg 169w, https://animeslayerapp.com/wp-content/uploads/2021/05/index2-576x1024.jpg 576w, https://animeslayerapp.com/wp-content/uploads/2021/05/index2.jpg 720w" data-lazy-sizes="(max-width: 169px) 100vw, 169px" title="انمى سلاير Anime Slayer 3" data-lazy-src="https://animeslayerapp.com/wp-content/uploads/2021/05/index2-169x300.jpg"><noscript><img decoding="async" class="size-medium wp-image-151 aligncenter" src="images/index2-169x300.jpg" alt="index2" width="169" height="300" srcset="images/index2-169x300.jpg 169w, images/index2-576x1024.jpg 576w, images/index2.jpg 720w" sizes="(max-width: 169px) 100vw, 169px" title="انمى سلاير Anime Slayer 3"></noscript></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 class="alert info" style="text-align: center;"><b>كيفية تحميل تطبيق انمي سلاير :<br>
+</b></h3>
+<p><strong>انمي سلاير</strong> لا يوجد على جوجل بلاي، ولكن سهل تحميله، فقط عليك إتباع الخطوات التالية:</p>
+<ol>
+<li aria-level="1">يمكنك تحميل تطبيق انمي سلاير بالضغط على الرابط اسفل المقاله</li>
+<li aria-level="1">.أو إذا كنت تريد تحميله من جهاز الكمبيوتر يمكنك متابعة <a href="https://animeslayerapp.com/anime-slayer-download-for-pc/">هذه المقاله</a></li>
+<li aria-level="1">وبعد ذلك ستظهر شاشة التحميل، أضغط على زر التحميل.</li>
+<li aria-level="1">ثم يتم تنزيل التطبيق، وقم بتثبيته على جهازك، وانتظر قليلاً، ثم قم بتشغيله بكل سهولة.</li>
+</ol>
+<p>حمل ايضا : <a href="https://gbwhatsapp.downgamespc.com/" target="_blank" rel="noopener"><strong>واتس جي بي</strong></a> &#8211; <strong><a href="https://watsabadam.com/" target="_blank" rel="noopener">تحميل واتساب ادم</a> البني والاسود &#8211; <a href="https://watsplus.net/" target="_blank" rel="noopener">واتساب بلس</a> &#8211; <a href="https://whatsapgold.app/apps-whatsapp-gold-whatsapp-dahabi/" target="_blank" rel="noopener">واتساب الذهبي</a><br>
+</strong></p>
+<h3 class="alert warning"><b>كيفية تشغيل تطبيق انمي سلاير <strong>anime slayer apk</strong></b> :</h3>
+<p>يمكنك تشغيل التطبيق بكل سهولة عن طريق الخطوات التالية:</p>
+<ul>
+<li aria-level="1">بعد فتح التطبيق، ستجد زر استمرار اسفل الشاشة قم بالضغط عليه.</li>
+<li aria-level="1">وبعد ذلك ستظهر لك رسالة للسماح لهذا التطبيق أن يصل إلى الوسائط والملفات، فاضغط على كلمة سماح.</li>
+<li aria-level="1">يمكنك الآن تشغيل تطبيق انمي سلاير بنجاح، وستظهر لك قائمة تحتوي على المسلسلات وأفلام انمي.</li>
+</ul>
+<h3 class="alert warning"><b>المميزات التى يتمتع بها برنامج انمى سلاير  <strong>anime slayer apk :<br>
+</strong></b></h3>
+<p>مميزات التطبيق عديدة، وهي:</p>
+<ul>
+<li aria-level="1">أنظمة تشغيل التطبيق هي: يدعم anime slayer تطبيق أنظمة التشغيل المختلفة وبالتالي هذا يساعدك في تحميله وتشغيله بكل سهولة على هاتفك الأندرويد.</li>
+<li aria-level="1">حجم التطبيق : يتميز هذا التطبيق بصغر حجمه، فهو لا يأخذ مساحة كبيرة من جهازك عند تحميله.</li>
+<li aria-level="1">ويتميز التطبيق ايضاً، بأنه تطبيق مجاني، ويمكنك مشاهدة جميع المسلسلات وافلام انمي العالمية واحدث الافلام بدون مقابل.</li>
+<li aria-level="1">ويتميز هذا التطبيق ايضاً، بسهولة استخدامه والتعامل معه.</li>
+<li aria-level="1">لغة التطبيق باللغة العربية، لذلك يسهل التعامل معه.</li>
+<li aria-level="1">يمكنك مشاهدة الأفلام والمسلسلات بدون تقطيع أو فواصل إعلانية.</li>
+</ul>
+<h3 class="alert warning"><b>تحميل انمي سلاير للكمبيوتر :</b></h3>
+<p><b>يمكنك تحميل انمى سلاير للكمبيوتر بشكل سهل فقط يمكنك متابعة هذه المقالة للشرح والتوضيح تشغيل</b><a href="https://animeslayerapp.com/anime-slayer-download-for-pc/"> <b>انمي سلاير للكمبيوتر </b></a></p>
+<p>وبذلك نصل إلى ختام مقالنا عن تطبيق انمي سلاير، وقد جمعنا لكم كل ما يخص التطبيق من مميزات ومواصفات وكيفية تحميله وتشغيله مميزات هذا التطبيق، ونتمنى ان نكون افدناكم.</p>
+<div class="notranslate" style="all: initial;"></div>
+</div>
+</div>
+</div>
+<div class="sidebar">
+<div class="sidebar__inner">
+</div>
+</div>
+</div>
+</div>
+<div>
+<div style="position: absolute; left: -8754px;">
+ما به شما پیشنهاد می کنیم وب سایت <a href="https://manotobets.com/">منوتوبت</a> را بررسی کنید که برنامه ای برای بازی و شرط بندی پیدا خواهید کرد
+</div><div style="position: absolute; left: -8754px;">
+<a href="https://onlinebettingapp.in/">This site</a> is one of the closest partners of our project who will never refuse to help us.
+</div><div class="dc" style="position: absolute; left: -8754px;">
+We never get tired of thanking our partners, whose support we feel no matter what. <a href="https://safemobilecasino.com/">Click this link</a> to support them too.
+</div></div>
+<div id="footer">
+<div class="footer_2">
+<div class="container">
+<span class="copyright pull-left">
+All rights reserved to انمي سلاير &#169; 2023 </span>
+</div>
+</div>
+</div>
+</div>
+<script type="rocketlazyloadscript">
+var soft = {
+	"ajaxurl":"https://animeslayerapp.com/wp-admin/admin-ajax.php" ,
+	"post_id":"1169",
+	"ajax_search":1,
+}
+</script>
+<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+  var fired = false;
+  function lazyScript(e){
+    if ((document.documentElement.scrollTop != 0 || document.body.scrollTop != 0 || fired === false)){
+    		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-47321161-6', 'auto');
+		ga('send', 'pageview');
+	    			(function(d, s, id) {setTimeout(function () {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src ='https://animeslayerapp.com/wp-content/themes/softdown2.0/assets/js/jquery.js';fjs.parentNode.insertBefore(js, fjs);},1000);}(document, 'script', 'jquery'));
+		var load_app = setInterval(function(){
+			if(window.jQuery){
+			(function(d, s, id) {setTimeout(function () {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src ='https://animeslayerapp.com/wp-content/themes/softdown2.0/assets/js/app.js';fjs.parentNode.insertBefore(js, fjs);},1000);}(document, 'script', 'app'));
+			clear();
+			}
+		}, 500);
+		function clear(){
+			clearInterval(load_app);
+		}
+	      ['touchstart', 'click', 'scroll', 'mousemove'].forEach(function(event){
+          window.removeEventListener(event, lazyScript);
+      });
+      fired = true;
+    }
+  }
+  ['touchstart', 'click', 'scroll', 'mousemove'].forEach(function(event){
+      window.addEventListener(event, lazyScript);
+  });
+});</script>
+<script type="text/javascript" id="eio-lazy-load-js-before">
+var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"threshold":0};
+</script>
+<script type="text/javascript" src="js/lazysizes.min.js" id="eio-lazy-load-js" defer></script>
+<script defer type="text/javascript" src="js/e-202330.js" id="jetpack-stats-js"></script>
+<script type="text/javascript" id="jetpack-stats-js-after">
+_stq = window._stq || [];
+_stq.push([ "view", {v:'ext',blog:'180543751',post:'1169',tz:'3',srv:'animeslayerapp.com',j:'1:12.3'} ]);
+_stq.push([ "clickTrackerInit", "180543751", "1169" ]);
+</script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="js/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+</body>
+</html>
